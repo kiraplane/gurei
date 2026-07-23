@@ -110,6 +110,7 @@ export function GuideArticle({
     graph.push({
       '@type': 'VideoObject',
       name: guide.video.title,
+      description: `${guide.summary} This supporting video is by ${guide.video.channel}.`,
       thumbnailUrl: `${siteFacts.domain}${guide.video.thumbnailUrl}`,
       uploadDate: guide.video.publishedAt,
       embedUrl: `https://www.youtube-nocookie.com/embed/${guide.video.id}`,

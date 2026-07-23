@@ -11,6 +11,7 @@ const videos = {
     channel: 'YashimaGaming',
     url: 'https://www.youtube.com/watch?v=3vgZHvS69fQ',
     thumbnailUrl: '/gurei/guides/demo-walkthrough.jpg',
+    publishedAt: '2025-07-13',
     checkedAt,
   },
   demoBosses: {
@@ -19,6 +20,7 @@ const videos = {
     channel: 'CrankyTemplar',
     url: 'https://www.youtube.com/watch?v=oAlWME9_bBs',
     thumbnailUrl: '/gurei/guides/demo-bosses.jpg',
+    publishedAt: '2025-06-12',
     checkedAt,
   },
   overview: {
@@ -28,6 +30,7 @@ const videos = {
     channel: 'GameTrailers',
     url: 'https://www.youtube.com/watch?v=sMx_Mkf1GkM',
     thumbnailUrl: '/gurei/guides/overview.jpg',
+    publishedAt: '2024-03-18',
     checkedAt,
   },
   review: {
@@ -36,6 +39,7 @@ const videos = {
     channel: 'Noisy Pixel',
     url: 'https://www.youtube.com/watch?v=5YlKp5ZxneA',
     thumbnailUrl: '/gurei/guides/review.jpg',
+    publishedAt: '2026-07-21',
     checkedAt,
   },
 } satisfies Record<string, GuideVideo>;

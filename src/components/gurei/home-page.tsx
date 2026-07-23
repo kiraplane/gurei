@@ -144,7 +144,10 @@ export function GureiHomePage({ locale }: { locale?: Locale }) {
       {
         '@type': 'VideoObject',
         name: 'Gurei official announcement trailer',
+        description:
+          'The official Gurei announcement trailer introduces Rei, the ten Kami boss rush, dynamic difficulty, and power-stealing combat.',
         thumbnailUrl: `${siteFacts.domain}${siteFacts.officialCoverImage}`,
+        uploadDate: siteFacts.officialTrailerPublishedAt,
         embedUrl: `https://www.youtube-nocookie.com/embed/${siteFacts.officialTrailerId}`,
       },
       {

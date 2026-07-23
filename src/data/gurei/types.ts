@@ -65,7 +65,7 @@ export interface GuideVideo {
   channel: string;
   url: string;
   thumbnailUrl: string;
-  publishedAt?: string;
+  publishedAt: string;
   viewCountLabel?: string;
   checkedAt: string;
 }

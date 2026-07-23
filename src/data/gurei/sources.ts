@@ -33,6 +33,7 @@ export const siteFacts = {
   officialHeroImage: '/gurei/screenshots/2.jpg',
   officialScreenshot: '/gurei/screenshots/4.jpg',
   officialTrailerId: 'QVC1dRZ2nZk',
+  officialTrailerPublishedAt: '2023-07-14',
 } as const;
 
 export const siteDescription =
