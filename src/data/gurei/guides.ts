@@ -1,7 +1,7 @@
 import { achievements } from './sources';
 import type { Guide, GuideVideo } from './types';
 
-const checkedAt = '2026-07-23';
+const checkedAt = '2026-07-24';
 const publishedAt = '2026-07-23';
 
 const videos = {
@@ -40,6 +40,26 @@ const videos = {
     url: 'https://www.youtube.com/watch?v=5YlKp5ZxneA',
     thumbnailUrl: '/gurei/guides/review.jpg',
     publishedAt: '2026-07-21',
+    checkedAt,
+  },
+  npcLocations: {
+    id: 'C56a8Kk8t2s',
+    title: 'Gurei - All 17 NPC locations and Walkthrough + Trophies',
+    channel: 'Gamer Social Club',
+    url: 'https://www.youtube.com/watch?v=C56a8Kk8t2s',
+    thumbnailUrl: '/gurei/guides/npc-locations.jpg',
+    publishedAt: '2026-07-23',
+    viewCountLabel: '45 views at July 24 check',
+    checkedAt,
+  },
+  trueEnding: {
+    id: 'S7mfv8ixX2Y',
+    title: 'Gurei - Caterpillar Locations and True Ending Guide',
+    channel: 'Gamer Social Club',
+    url: 'https://www.youtube.com/watch?v=S7mfv8ixX2Y',
+    thumbnailUrl: '/gurei/guides/true-ending.jpg',
+    publishedAt: '2026-07-23',
+    viewCountLabel: '19 views at July 24 check',
     checkedAt,
   },
 } satisfies Record<string, GuideVideo>;
@@ -1035,6 +1055,171 @@ export const guides: Guide[] = [
     ],
   }),
   makeGuide({
+    slug: 'npc-locations',
+    path: '/guides/npc-locations',
+    title: 'Gurei NPC Locations: All 17 Persistent Encounters',
+    seoTitle: 'Gurei NPC Locations: All 17 Trophy Encounters',
+    seoDescription:
+      'Track all 17 Gurei NPC encounters, understand the three-boss spawn cadence and avoid the quest-order mistake that can block completion.',
+    summary:
+      'A new NPC can appear after each three-boss milestone, but ten Kami are not enough to reveal all 17 in one run. Use the persistent world to finish the roster across multiple attempts.',
+    category: 'Secrets',
+    difficulty: 'Checklist',
+    coverImageUrl: videos.npcLocations.thumbnailUrl,
+    sourceStrategy: 'user_intent_youtube',
+    sourceNotes:
+      'Built from a current full-release video with chapter markers for all 17 encounter trophies. The page keeps exact room turns in the embedded video and focuses on the repeatable spawn and completion logic.',
+    videoSearchQueries: [
+      'Gurei NPC locations',
+      'Gurei all trophies',
+      'Gurei achievement guide',
+    ],
+    video: videos.npcLocations,
+    tags: ['17 NPCs', 'Trophies', 'Persistent world'],
+    relatedRoutes: [
+      '/guides/achievements',
+      '/guides/true-ending',
+      '/guides/lives-and-runs',
+      '/guides/boss-order',
+    ],
+    body: [
+      {
+        heading: 'Why the NPC list takes more than one run',
+        paragraphs: [
+          'Gurei has 17 named NPC encounter trophies: The Lady, The Child, The Runner, The Fan, The Eyes, The Weasels, The Grudge, The Owl, The Pillar Man, The Drunkard, The Scarer, The Statues, The Giant, The Raccoon Dog, The Rabbit, The Dummy and The Priestess. Current full-release footage shows the complete set and the corresponding encounter route.',
+          'The important rule is cadence. A new NPC can appear after every three defeated Kami, and a run contains only ten Kami. That means one clear cannot reveal all 17 encounters. The NPC layer persists across attempts, so a reset is expected progress rather than a reason to restart the whole checklist.',
+        ],
+        bullets: [
+          '3 boss wins: check the hub and side rooms for the next encounter.',
+          '6 boss wins: make a second sweep before committing to the next arena.',
+          '9 boss wins: complete the late-run sweep before the final Kami.',
+          'New run: revisit persistent NPCs and continue any unfinished request.',
+        ],
+      },
+      {
+        heading: 'Use a name-first checklist',
+        paragraphs: [
+          'Do not try to memorize a long room sequence while learning boss patterns. Keep the 17 names as a checklist and use the embedded video chapter for the exact route when a specific trophy is missing. This separates exploration from combat and makes it obvious whether the problem is an undiscovered NPC or an unfinished request.',
+          'After every three-boss threshold, return to the central routes and inspect rooms that previously looked empty. If no new interaction appears, verify that the milestone boss was fully completed and that the current run has returned to the hub state. Avoid rushing directly into the next arena when working on trophies.',
+        ],
+      },
+      {
+        heading: 'Complete requests before advancing dependent encounters',
+        paragraphs: [
+          'The current guide source warns that one NPC request can affect later completion order. When an NPC presents a clear task, finish or document it before pushing several more boss milestones. The persistent world protects general progress, but it does not make every quest state interchangeable.',
+          'If a trophy fails to trigger, revisit the NPC after the next hub return rather than forcing a fresh save. Check the interaction twice, confirm any requested item or action was delivered, then move to the next milestone. Only start a clean save after ruling out persistent-state and route-order causes.',
+        ],
+      },
+      {
+        heading: 'Pair the roster with the achievement page',
+        paragraphs: [
+          'The names above match the encounter-focused achievement cluster, while the boss page tracks the ten Kami and the challenge page tracks run conditions. Keeping those groups separate prevents an NPC trophy from being mistaken for a boss-order requirement.',
+          'Use the video for visual room recognition, this page for milestone logic and the achievement checklist for the remaining categories. That three-part workflow is faster than replaying an eight-minute route from the beginning every time one name is missing.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Can all Gurei NPCs appear in one run?',
+        answer:
+          'No. New encounters are tied to three-boss milestones, and the ten-Kami run is too short to reveal all 17. Progress persists across attempts.',
+      },
+      {
+        question: 'How many NPC encounter trophies are in Gurei?',
+        answer:
+          'Current full-release guide footage documents 17 named NPC encounter trophies.',
+      },
+      {
+        question: 'Do NPC interactions reset when a Gurei run ends?',
+        answer:
+          'The world and NPC progress persist across attempts, unlike the main run power sequence.',
+      },
+    ],
+  }),
+  makeGuide({
+    slug: 'true-ending',
+    path: '/guides/true-ending',
+    title: 'Gurei True Ending: Caterpillar Route and Final Run',
+    seoTitle: 'Gurei True Ending Guide: Caterpillar Locations',
+    seoDescription:
+      'Unlock the Gurei true ending by clearing both normal endings, following five Caterpillar encounters and surrendering nine Kami skills before the final fights.',
+    summary:
+      'Finish both normal endings first, follow the Caterpillar through five encounters, then give up nine collected Kami skills before defeating the tenth Kami and final boss without them.',
+    category: 'Secrets',
+    difficulty: 'Checklist',
+    coverImageUrl: videos.trueEnding.thumbnailUrl,
+    sourceStrategy: 'user_intent_youtube',
+    sourceNotes:
+      'A July 23 full-release video supplies the five-location sequence and final-run condition. The embedded chapters remain the visual authority for exact rooms.',
+    videoSearchQueries: [
+      'Gurei true ending',
+      'Gurei Caterpillar locations',
+      'Gurei endings guide',
+    ],
+    video: videos.trueEnding,
+    tags: ['True ending', 'Caterpillar', 'Five locations'],
+    relatedRoutes: [
+      '/guides/endings',
+      '/guides/npc-locations',
+      '/guides/boss-order',
+      '/guides/kami-powers',
+    ],
+    body: [
+      {
+        heading: 'Complete both normal endings first',
+        paragraphs: [
+          'The Caterpillar route is not a shortcut around the standard conclusions. Current full-release guide footage identifies both normal endings as the prerequisite for the true-ending quest. Finish those outcomes on the same persistent save before treating a missing Caterpillar as a location bug.',
+          'Because Gurei preserves its world layer across attempts, you can use earlier runs to complete NPC tasks and endings while continuing to refine a safe boss order. Do not erase the save after a failed final attempt; the relevant world-state progress is meant to survive the run reset.',
+        ],
+      },
+      {
+        heading: 'Follow the Caterpillar through five encounters',
+        paragraphs: [
+          'After the normal endings, locate the injured Caterpillar and continue the quest through five appearances. The current video marks the sequence at 00:21, 00:35, 00:57, 01:30 and 01:55, with the final encounter returning to the main hall.',
+          'Use those chapters for exact room recognition. At each stop, finish the interaction before leaving and confirm the character has moved on. If the next appearance is absent, verify the two normal endings and revisit the previous location rather than jumping directly to the final run.',
+        ],
+        bullets: [
+          'Location 1: video chapter 00:21.',
+          'Location 2: video chapter 00:35.',
+          'Location 3: video chapter 00:57.',
+          'Location 4: video chapter 01:30.',
+          'Final main-hall location: video chapter 01:55.',
+        ],
+      },
+      {
+        heading: 'Prepare a nine-Kami route you can finish cleanly',
+        paragraphs: [
+          'Once the Caterpillar reaches the final main-hall position, begin a new run and defeat nine Kami. This is not the time to test an unfamiliar order. Use your most reliable early opener, keep the hardest personal matchup away from the final slot and preserve lives for the no-skill finish.',
+          'Before entering the tenth Kami arena, return to the Caterpillar. Give the character all nine Kami skills collected during the run. The route therefore asks you to trade away the very tools that made the run stronger, so basic dodge, sword and stomp execution must be stable before the handoff.',
+        ],
+      },
+      {
+        heading: 'Defeat the tenth Kami and final boss without Kami skills',
+        paragraphs: [
+          'After surrendering the nine powers, complete the tenth Kami and the final boss in sequence. Do not enter the tenth arena first and plan to return later; the handoff is the defining condition described by the current guide source.',
+          'Choose a final Kami whose low-tool matchup is already familiar. A fight that depended on shield, healing or mobility during earlier routes is a poor last slot. Practice its basic-kit version before committing the true-ending run, then treat every extra life as a full pattern attempt rather than a damage-trading budget.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'What are the prerequisites for the Gurei true ending?',
+        answer:
+          'Complete both normal endings, finish the five Caterpillar encounters and reach the final main-hall interaction.',
+      },
+      {
+        question: 'When do I give the Caterpillar my Kami skills?',
+        answer:
+          'After defeating nine Kami and before entering the tenth Kami fight.',
+      },
+      {
+        question: 'Do I fight the last two battles without Kami powers?',
+        answer:
+          'Yes. The current full-release route requires surrendering the nine collected skills before the tenth Kami and final boss.',
+      },
+    ],
+  }),
+  makeGuide({
     slug: 'download',
     path: '/download',
     title: 'Gurei Download: Use the Official Steam Build',
@@ -1117,6 +1302,8 @@ export const guideSlugs = new Set(guides.map((guide) => guide.slug));
 export const featuredGuides = [
   'beginner-guide',
   'boss-order',
+  'true-ending',
+  'npc-locations',
   'all-kami-bosses',
   'combat-and-dodge',
   'achievements',

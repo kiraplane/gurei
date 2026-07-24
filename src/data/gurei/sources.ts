@@ -5,7 +5,7 @@ import type {
   KeywordMatrixItem,
 } from './types';
 
-export const checkedAt = '2026-07-23';
+export const checkedAt = '2026-07-24';
 
 export const siteFacts = {
   siteName: 'Gurei Wiki',
@@ -228,6 +228,22 @@ export const sources: DataSource[] = [
     checkedAt,
     confidence: 'medium',
     note: 'Overview-media cross-check for the nonlinear boss and power structure.',
+  },
+  {
+    type: 'youtube',
+    label: 'All 17 NPC locations and trophies',
+    url: 'https://www.youtube.com/watch?v=C56a8Kk8t2s',
+    checkedAt,
+    confidence: 'medium',
+    note: 'Current full-release route with chapters for all 17 persistent NPC encounters.',
+  },
+  {
+    type: 'youtube',
+    label: 'Caterpillar locations and true ending',
+    url: 'https://www.youtube.com/watch?v=S7mfv8ixX2Y',
+    checkedAt,
+    confidence: 'medium',
+    note: 'Current full-release evidence for the normal-ending prerequisite, five Caterpillar encounters and final no-skill run.',
   },
   {
     type: 'search',
