@@ -1,7 +1,7 @@
 import { achievements } from './sources';
 import type { Guide, GuideVideo } from './types';
 
-const checkedAt = '2026-08-04';
+const checkedAt = '2026-08-10';
 const publishedAt = '2026-07-23';
 
 const videos = {
