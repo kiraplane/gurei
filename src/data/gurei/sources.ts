@@ -5,7 +5,7 @@ import type {
   KeywordMatrixItem,
 } from './types';
 
-export const checkedAt = '2026-08-20';
+export const checkedAt = '2026-08-22';
 
 export const siteFacts = {
   siteName: 'Gurei Wiki',
